@@ -1,0 +1,1 @@
+export type { ProductsList, Product, Meta } from './products';

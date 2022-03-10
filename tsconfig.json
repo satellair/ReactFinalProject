@@ -11,6 +11,75 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
+    "baseUrl": "." /* Base directory to resolve non-absolute module names. */,
+    "paths": {
+      "@pages": [
+        "src/pages/index.ts"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@layouts": [
+        "src/layouts/index.ts"
+      ],
+      "@layouts/*": [
+        "src/layouts/*"
+      ],
+      "@components": [
+        "src/components/index.ts"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
+      "@services": [
+        "src/services/index.ts"
+      ],
+      "@services/*": [
+        "src/services/*"
+      ],
+      "@models": [
+        "src/models/*"
+      ],
+      "@models/*": [
+        "src/models/*"
+      ],
+      "@tailwind": [
+        "src/services/tailwind/index.ts"
+      ],
+      "@store": [
+        "./src/store/index.ts"
+      ],
+      "@store/*": [
+        "./src/store/*"
+      ],
+      "@types": [
+        "src/@types/products.ts"
+      ],
+      "@types/*": [
+        "./src/@types/*"
+      ],
+      "@atoms": [
+        "./src/components/atoms/index.ts"
+      ],
+      "@atoms/*": [
+        "./src/components/atoms/*"
+      ],
+      "@molecules": [
+        "./src/components/molecules/index.ts"
+      ],
+      "@molecules/*": [
+        "./src/components/molecules/*"
+      ],
+      "@organisms": [
+        "./src/components/organisms/index.ts"
+      ],
+      "@organisms/*": [
+        "./src/components/organisms/*"
+      ],
+    },
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
@@ -18,13 +87,16 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "preserve",
+    "incremental": true
   },
   "include": [
-    "src"
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
   ],
   "exclude": [
     "node_modules",
-    "tailwind.config.js"
+    "tailwind.config.js",
   ]
 }

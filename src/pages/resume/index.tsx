@@ -4,7 +4,7 @@ type Props = {}
 
 const index = (props: Props) => {
   return (
-    <div>index</div>
+    <h1 className="text-xl">index</h1>
   )
 }
 

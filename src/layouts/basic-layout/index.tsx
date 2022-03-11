@@ -17,6 +17,7 @@ const NextNProgress = dynamic(() => import("nextjs-progressbar"));
 const navitem = [
   ["/", "Home"],
   ["/about", "About"],
+  ["/resume", "Resume"],
   ["/products", "Products"],
   ["/cart", "Cart"],
   ["/contact", "Contact"],
@@ -81,22 +82,20 @@ const MiniNav: FunctionComponent = ({ children }) => {
               <Icon Icon={X} theme={themeColor} />
             </div>
             {/* navmenu */}
-            <div className="container px-4 mx-auto inset-x-25 top-25 text-center">
-              <div className="">
+            <div className="container  justify-center px-4 mx-auto mt-24 text-center">
+              <div className="grid grid-flow-row gap-12 ">
                 {navitem.map((item) => {
                   return (
-                    <div className="top-30">
                       <Link href={item[0]}>
                         <div
                           key={item[1]}
                           title={item[1]}
-                          className="block text-center text-3xl font-bold overflow-visible transition ease-in-out hover:-translate-y-1 hover:scale-125 hover:drop-shadow-md duration-300"
+                          className="flex text-center justify-center text-5xl font-bold overflow-visible transition ease-in-out hover:-translate-y-1 hover:scale-125 hover:drop-shadow-md duration-300"
                           onClick={() => toggleNav(false)}
                         >
                           {item[1]}
                         </div>
                       </Link>
-                    </div>
                   );
                 })}
               </div>

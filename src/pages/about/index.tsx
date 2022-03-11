@@ -15,8 +15,9 @@ const About: FunctionComponent = () => {
           <h1 className="text-6xl md:text-7xl font-bold">About Me</h1>
           <div className="mt-12">
             <article className="text-xl md:text-2xl">
-              <div className="float-center md:float-left md:pr-5 lg:px-10 md:w-max inset-x-0 drop-shadow-lg">
+              <div className="float-center md:float-left md: md:pr-5 lg:px-10 md:w-max inset-x-0">
                 <Image
+                  className="drop-shadow-lg rounded-lg"
                   src={profilePic}
                   layout="intrinsic"
                   width="300px"

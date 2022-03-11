@@ -1,3 +1,5 @@
+import type { Meta } from './metadata';
+
 export interface ProductsList {
   data: Product[];
   meta: Meta;
@@ -12,7 +14,3 @@ export interface Product {
   picture: string;
 }
 
-export interface Meta {
-  status: string;
-  statusCode: number;
-}

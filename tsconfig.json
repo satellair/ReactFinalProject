@@ -56,7 +56,7 @@
         "./src/store/*"
       ],
       "@types": [
-        "src/@types/products.ts"
+        "src/@types/index.ts"
       ],
       "@types/*": [
         "./src/@types/*"
@@ -94,7 +94,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/components/atoms/icon"  ],
   "exclude": [
     "node_modules",
     "tailwind.config.js",

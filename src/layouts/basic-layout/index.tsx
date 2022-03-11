@@ -4,6 +4,7 @@ import { Menu, X, Moon, Sun } from "react-feather";
 import Icon from "@atoms/icon";
 
 import Link from "next/link";
+import Head from "next/head";
 import dynamic from "next/dynamic";
 
 import { useAppSelector, useAppDispatch } from "@store/hooks";
@@ -35,6 +36,13 @@ const MiniNav: FunctionComponent = ({ children }) => {
 
   return (
     <>
+      <Head>
+        <title>thitiwat-t</title>
+        <link
+          rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥺</text></svg>"
+        />
+      </Head>
       <NextNProgress
         color="#EBAC8A"
         startPosition={0.3}
@@ -43,24 +51,18 @@ const MiniNav: FunctionComponent = ({ children }) => {
         showOnShallow={true}
       />
       <div
-        className={`relative w-screen h-screen ${
+        className={`relative w-screen h-max ${
           themeColor === "light" ? "bg-light text-black" : "bg-dark text-white"
         }`}
       >
         <section className="fixed columns-2 top-10 right-10">
-          <div
-            className="z-2"
-            onClick={toggleThemeColor}
-          >
+          <div className="z-2" onClick={toggleThemeColor}>
             <Icon
               Icon={themeColor === "light" ? Sun : Moon}
               theme={themeColor}
             />
           </div>
-          <div
-            className="z-2"
-            onClick={() => toggleNav(true)}
-          >
+          <div className="z-2" onClick={() => toggleNav(true)}>
             <Icon Icon={Menu} theme={themeColor} />
           </div>
         </section>

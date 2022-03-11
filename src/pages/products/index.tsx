@@ -4,7 +4,7 @@ type Props = {}
 
 const index = (props: Props) => {
   return (
-    <h1 className="text-xl">resume page</h1>
+    <h1 className="text-xl">product page</h1>
   )
 }
 

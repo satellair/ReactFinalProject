@@ -53,7 +53,7 @@ const MiniNav: FunctionComponent = ({ children }) => {
             onClick={toggleThemeColor}
           >
             <Icon
-              Icon={themeColor === "light" ? Moon : Sun}
+              Icon={themeColor === "light" ? Sun : Moon}
               theme={themeColor}
             />
           </div>

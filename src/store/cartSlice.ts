@@ -25,9 +25,11 @@ const cartSlice = createSlice({
       const itemIndex = state.cartItems.findIndex(item => item.id === action.payload.id)
       if (itemIndex >= 0) {
         state.cartItems[itemIndex].qty += 1
+        state.cartTotalQty += 1
       } else {
         const tempProduct = { ...action.payload, qty: 1 }
         state.cartItems.push(tempProduct);
+        state.cartTotalQty += 1
       }
     }
   }

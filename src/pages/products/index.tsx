@@ -15,6 +15,7 @@ const ProductsPage: FunctionComponent = () => {
   const [error, setError] = React.useState(null);
 
   const themeColor = useAppSelector((state) => state.general.theme);
+  const cartTotal = useAppSelector((state) => state.cart.cartTotalQty);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -46,16 +47,20 @@ const ProductsPage: FunctionComponent = () => {
     <div className="justify-center h-max-content w-screen px-16 md:px-32">
       <div className="flex-row mt-12">
         <h1 className="text-6xl md:text-7xl font-bold">Products</h1>
+        <h2 className="text-2xl md:text-3xl font-bold">
+          {cartTotal} items in cart.
+        </h2>
         <section className="md:h-full flex items-center text-black">
           <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-wrap justify-center -m-4">
               {products.map((product: Product) => {
                 return (
                   <ProductCard
+                    type="product"
                     product={product}
                     theme={themeColor}
                     addToCart={() => {
-                      dispatch(addToCart({...product, qty: 1}));
+                      dispatch(addToCart({ ...product, qty: 1 }));
                     }}
                   />
                 );

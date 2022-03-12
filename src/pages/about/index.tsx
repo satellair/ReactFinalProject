@@ -1,7 +1,6 @@
 import type { FunctionComponent } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FileText } from "react-feather";
 import profilePic from "/public/images/mememe.jpg";
 
 import { useAppSelector } from "@store/hooks";

@@ -3,7 +3,6 @@ import Icon from "@atoms/icon";
 
 import { LinkItemList } from "@types";
 import { Facebook, GitHub, Linkedin, AlertOctagon } from "react-feather";
-import Link from "next/link";
 
 import { useAppSelector } from "@store/hooks";
 
